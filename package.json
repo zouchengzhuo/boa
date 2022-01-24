@@ -1,6 +1,6 @@
 {
-  "name": "@pipcook/boa",
-  "version": "2.1.0",
+  "name": "cz-pipcook-boa-no-leak",
+  "version": "2.2.0",
   "description": "Use Python modules seamlessly in Node.js",
   "main": "lib/index.js",
   "scripts": {
