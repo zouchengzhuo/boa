@@ -6,11 +6,7 @@ PythonReference::PythonReference(PythonObject *scope) : mScope(scope) {
   mCapsule = PyCapsule_New(this, nullptr, nullptr);
 }
 
-PythonReference::~PythonReference() {
-  if (isRef) {
-    mScope->Unref();
-  }
-}
+PythonReference::~PythonReference() {}
 
 template <typename T> T *PythonReference::Unwrap(PyObject *wrapped) {
   return reinterpret_cast<T *>(PyCapsule_GetPointer(wrapped, nullptr));
